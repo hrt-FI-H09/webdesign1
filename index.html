@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>24FI102</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./css/style.css">
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+		$(function() {
+			const hum = $('#hamburger, .close')
+			const nav = $('.sp-nav')
+			hum.on('click', function(){
+				nav.toggleClass('toggle');
+			});
+		});
+	  </script>
+</head>
+<body>
+	<header id="header">
+		<h1 class="slide-left show">
+			<a href="">Information Literacy</a>
+		</h1>
+		<nav class="pc-nav slide-right show">
+			<ul>
+				<li><a href="#club">CLUB</a></li>
+				<li><a href="#hobby">HOBBY</a></li>
+				<li><a href="https://www.dendai.ac.jp/"target="_blank">SCHOOL</a></li>
+				<li><a href="./contact.html"target="_blank">CONTACT</a></li>
+			</ul>
+		</nav>
+		<nav class="sp-nav">
+			<ul>
+				<li><a href="#club">CLUB</a></li>
+				<li><a href="#hobby">HOBBY</a></li>
+				<li><a href="https://www.dendai.ac.jp/"target="_blank">SCHOOL</a></li>
+				<li><a href="./contact.html"target="_blank">CONTACT</a></li>
+				<li class="close"><span>閉じる</span></li>
+			</ul>
+		</nav>
+		<div id="hamburger" class="slide-right show">
+			<span></span>
+		</div>
+	</header>
+	<div class="main-visual">
+		<div class="slide-bottom show">
+			<h2>Homma Haruto Web Design</h2>
+			<a href="./index_jap.html" target="_blank"class="button">ABOUT DETEAL</a>
+		</div>
+	</div>
+
+	<section id="club">
+		<h2 class="slide-bottom show"> <a id="club" class="anchor"><h3>CLUB</h3></a><span></span></h2>
+<div>
+			<div class="icon_list">
+				<ul class="flex">
+					<li class="slide-left show"><a href="https://tdu-src.com/" target="_blank"><img src="./icon/SRC.png" alt="ソフ研"><p>ソフトウェア研究部</p></li>
+					<li class="slide-left show"><a href="https://tbc1010.com/" target="_blank"><img src="./icon/TBC.png" alt="放送"><p>放送委員会</p></li>
+				
+				</ul>
+			</div>
+	</section>
+	<section id="hobby">
+		<h2 class="slide-bottom show"><a id="hobby" class="anchor"><h3>HOBBY</h3></a><span></span></h2>
+		<div>
+			<div class="icon_list">
+				<ul class="flex">
+					<li class="slide-left show"><a href="https://www.google.co.jp/maps/search/%E5%8C%97%E5%8D%83%E4%BD%8F%E3%80%80%E3%83%A9%E3%83%B3%E3%83%81/@35.748018,139.7974905,16z/data=!3m1!4b1?hl=ja&entry=ttu" target="_blank"><img src="./icon/lunch.png" alt="グルメ"><p>グルメ</p></a></li>
+					<li class="slide-left show"><a href="javascript:random_jump_anime();"><img src="./icon/animation.png" alt="アニメ"><p>アニメ</p></a></li>
+					<li class="slide-left  show"><a href="javascript:random_jump_music();"><img src="./icon/music.png" alt="音楽"><p>音楽</p></a></li>
+					<li class="slide-left  show"><a href="javascript:random_jump_game();"><img src="./icon/game.png" alt="ゲーム"><p>ゲーム</p></a></li>
+				</ul>
+			</div>
+			<p class="slide-right show">アイコンをクリックすると、関連するページにランダムで飛びます</p>
+
+	</section>
+
+<a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+
+	<footer>
+		<small>footer</small>
+	</footer>	
+<script>
+	//フェードイン用コード
+	$(function(){
+		$(window).on('load scroll', function() {
+			$(".show").each(function() {
+				var winScroll = $(window).scrollTop();
+				var winHeight = $(window).height();
+				var scrollPos = winScroll + (winHeight * 0.9);
+				if($(this).offset().top < scrollPos) {
+					$(this).css({opacity: 1, transform: 'translate(0, 0)'});
+				}
+			});
+		});
+	});
+
+	//ヘッダーの高さと背景色の変更
+	$(function () {
+		const header = $('#header');
+		$(window).on('load scroll' ,function () {
+			var headerHeight = header.innerHeight();
+
+			$(window).on('scroll' ,function () {
+				if ( $(this).scrollTop() > 100 ) {
+					header.addClass('min-header');
+				} else {
+					header.removeClass('min-header');
+				}
+			});
+		});
+});
+</script>
+<script src="./java.js"></script>
+</body>
+</html>

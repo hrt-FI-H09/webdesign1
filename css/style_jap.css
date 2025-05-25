@@ -1,0 +1,142 @@
+
+h2 {
+  padding: 0.5em; /*文字周りの余白*/
+  color: #497849; /*文字色*/
+  background: #f5fff5; /*背景色*/
+  border-left: solid 5px #aaffaa; /*左線（実線 太さ 色）*/
+}
+
+h3{
+  color:#144614; /*文字の色*/
+  font-size:large; /*文字の大きさ*/
+}
+
+h4 {
+  padding: 0.5em; /*文字周りの余白*/
+  color: #7a2526; /*文字色*/
+  background: #ffebeb; /*背景色*/
+  border-left: solid 5px #ffc8c8; /*左線（実線 太さ 色）*/
+}
+
+h5 {
+  color:#783232; /*文字の色*/
+  font-size:large; /*文字の太さ*/
+}
+
+h6 {
+  /*線の種類（二重線）太さ 色*/
+  border-bottom: double 5px #4b32cc;
+  font-size:x-large;
+}
+
+.slide-container {
+ width: 100%; /*画面の横幅のうち占める割合*/
+ margin: 30px auto; /*上の行からの空白*/
+ display: flex;
+ align-items: center;
+ overflow: hidden;
+}
+
+.slide-wrapper {
+ display: flex;
+ animation: slide-flow 40s infinite linear 1s both; /*画像の動く早さ*/
+}
+
+.slide{
+ width: 200px; /*画像の大きさ*/
+ object-fit:cover;
+ border: 1px solid #ddd; /*画像の隙間*/
+}
+
+@keyframes slide-flow {
+ 0% {transform: translateX(0);}
+ 100% {transform: translateX(-100%);}
+}
+
+/*ページ内リンクの位置調整*/
+a.anchor{
+    display: block;
+    padding-top: 120px;
+    margin-top: -120px;
+}
+
+/*リンクボタン*/
+a.button {
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+	padding: 15px 30px;
+	text-align: center;
+	border: 1px solid #fff;
+	transition: all .3s ease-out;
+}
+a.button:hover {
+	color: #505050;
+	background-color: #fff;
+}
+a.button2 {
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+	padding: 15px 30px;
+	text-align: center;
+	border: 1px solid #000000;
+        color:#000000;
+	transition: all .3s ease-out;
+}
+a.button2:hover {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.under{
+  color:#2e8b57;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.under::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #3cd371;
+  transition: .3s;
+  transform: translateX(-50%);
+}
+
+.under:hover::after{
+  width: 100%;
+}
+
+/*見出し*/
+.heading06 { /*見出し*/
+	position: relative;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	font-size: 30px;
+	text-align: center;
+        color:#144614;
+}
+
+.heading06 span {
+	position: relative;
+	z-index: 2;
+}
+
+.heading06::before { /*背文字*/
+	content: attr(data-en);
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #98fb98;
+	font-size: 37px;
+	font-style: italic;
+}
+
+}

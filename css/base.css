@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+.skeleton {
+    height:100vh;
+    width:70vw;
+    background-image:repeating-linear-gradient(#eff3f6, #eff3f6 20px, #e1e9ef 20px, #e1e9ef 40px);
+    opacity:0.5;
+   }
+
+@keyframes reveal-image {
+    from {
+     clip-path: inset(30% round 20%);
+    }
+    to {
+     clip-path: inset(0);
+    }
+   }
+
+   .animationElement {
+    animation: reveal-image linear both; 
+    animation-timeline: view();
+    animation-range: contain 0% contain 50%;
+   }
+
+/*ƒŠƒ“ƒNƒ{ƒ^ƒ“*/
+a.button {
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+	padding: 15px 30px;
+	text-align: center;
+	border: 1px solid #fff;
+	transition: all .3s ease-out;
+}
+a.button:hover {
+	color: #505050;
+	background-color: #fff;
+}
+a.button2 {
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+	padding: 15px 30px;
+	text-align: center;
+	border: 1px solid #000000;
+        color:#000000;
+	transition: all .3s ease-out;
+}
+a.button2:hover {
+	color: #ffffff;
+	background-color: #000000;
+}
